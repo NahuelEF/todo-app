@@ -1,7 +1,11 @@
 :root {
   /* Colors */
   --primary-bright-blue: hsl(220, 98%, 61%);
-  --primary-bg-check: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --primary-bg-check: linear-gradient(
+    145deg,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
 
   /* Light Theme */
   --very-light-gray: hsl(0, 0%, 98%);
@@ -14,6 +18,7 @@
   --primary-font-family: "Josefin Sans", sans-serif;
   --regular-weight: 400;
   --bold-weight: 700;
+  --border-radius: 5px;
 }
 
 /* (Opcional) Las adaptamos al modo oscuro */
@@ -28,12 +33,6 @@
     --very-dark-grayish-blue: hsl(237, 14%, 26%);
   }
 }
-
-/* (Opcional) Configuramos si un usuario ha activado el modo alto contraste. (WD) */
-/* @media (prefers-contrast: high) {
-  :root {
-  }
-} */
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -136,6 +135,11 @@ label {
   color: inherit;
   display: block;
   appearance: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
 }
 
 table,

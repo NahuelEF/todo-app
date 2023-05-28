@@ -1,0 +1,22 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.check-btn {
+  width: 30px;
+  height: 30px;
+  background: var(--primary-bg-check) border-box;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  padding-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

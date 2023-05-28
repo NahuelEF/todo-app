@@ -1,20 +1,10 @@
-import "./App.css";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <>
-      <main>
-        <h1>Todo</h1>
-        <ul>
-          <li>items left</li>
-          <li>All</li>
-          <li>Active</li>
-          <li>Completed</li>
-          <li>Clear Completed</li>
-        </ul>
-        <p>Drag and drop to reorder list</p>
-      </main>
-      <footer>
+      <Home />
+      {/*      <footer>
         <p className="atrribution">
           Challenge by{" "}
           <a
@@ -34,7 +24,7 @@ function App() {
           </a>
           .
         </p>
-      </footer>
+      </footer> */}
     </>
   );
 }
