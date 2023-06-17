@@ -1,0 +1,45 @@
+.todo-item {
+  border-bottom: 1px solid var(--primary-line);
+  padding: 1rem;
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.todo__btn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--primary-line);
+  padding-left: 0.1rem;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: inherit;
+}
+
+.todo__btn:checked {
+  border-color: transparent;
+  background: var(--primary-bg-check) border-box;
+}
+
+.todo__btn:checked::before {
+  content: url(../../assets/icons/icon-check.svg);
+}
+
+.todo__label {
+  user-select: none;
+  cursor: inherit;
+}
+.todo__btn:checked + .todo__label {
+  color: var(--secondary-txt);
+  text-decoration: line-through;
+}

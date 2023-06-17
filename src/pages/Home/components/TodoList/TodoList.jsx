@@ -1,11 +1,16 @@
 import TodoItem from "../../../../components/TodoItem/TodoItem";
+import todoTask from "../../todoTask.json";
 
 const TodoList = () => {
   return (
     <ul>
-      <TodoItem todo={"Jog around the park 3x"} />
-      <TodoItem todo={"10 minutes meditation"} />
-      <TodoItem todo={"Read for 1 hour"} />
+      {todoTask.length === 0 ? (
+        <li>
+          <p>No hay task</p>
+        </li>
+      ) : (
+        todoTask.map(({ id, todo }) => <TodoItem todo={todo} key={id} />)
+      )}
     </ul>
   );
 };

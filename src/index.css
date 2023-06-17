@@ -1,37 +1,37 @@
 :root {
-  /* Colors */
-  --primary-bright-blue: hsl(220, 98%, 61%);
+  --primary-txt-bright: hsl(220, 98%, 61%);
   --primary-bg-check: linear-gradient(
     145deg,
     hsl(192, 100%, 67%),
     hsl(280, 87%, 65%)
   );
 
-  /* Light Theme */
-  --very-light-gray: hsl(0, 0%, 98%);
-  --very-light-grayish-blue: hsl(236, 33%, 92%);
-  --light-grayish-blue: hsl(233, 11%, 84%);
-  --dark-grayish-blue: hsl(236, 9%, 61%);
-  --very-dark-grayish-blue: hsl(235, 19%, 35%);
-
-  /* Typography */
   --primary-font-family: "Josefin Sans", sans-serif;
   --regular-weight: 400;
   --bold-weight: 700;
   --border-radius: 5px;
 }
 
-/* (Opcional) Las adaptamos al modo oscuro */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --very-dark-blue: hsl(235, 21%, 11%);
-    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
-    --light-grayish-blue: hsl(234, 39%, 85%);
-    --hover-light-grayish-blue: hsl(236, 33%, 92%);
-    --dark-grayish-blue: hsl(234, 11%, 52%);
-    --very-dark-grayish-blue: hsl(233, 14%, 35%);
-    --very-dark-grayish-blue: hsl(237, 14%, 26%);
-  }
+.light {
+  /* NEW COLORS */
+  --primary-bg: rgb(250, 250, 250); /* main */
+  --secondary-bg: rgb(255, 255, 255); /* task */
+  --primary-txt: rgb(67, 66, 71); /* text */
+  --secondary-txt: rgb(209, 209, 211); /* text line-through */
+  --tertiary-txt: rgb(151, 150, 155); /* text footer */
+  --tertiary-hover-txt: rgb(88, 86, 107); /* text footer */
+  --primary-line: rgb(230, 229, 234);
+}
+
+.dark {
+  /* NEW COLORS */
+  --primary-bg: rgb(24, 24, 36); /* main */
+  --secondary-bg: rgb(37, 39, 60); /* task */
+  --primary-txt: rgb(200, 202, 227); /* text */
+  --secondary-txt: rgb(77, 79, 100); /* text line-through */
+  --tertiary-txt: rgb(96, 98, 123); /* text footer */
+  --tertiary-hover-txt: rgb(233, 235, 255); /* text footer */
+  --primary-line: rgb(73, 76, 107);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -159,8 +159,6 @@ body {
   min-height: 100vh;
   font-size: 100%;
   font-family: var(--primary-font-family);
-  color: var(--light-grayish-blue);
-  background-color: var(--very-dark-blue);
   hyphens: auto;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;

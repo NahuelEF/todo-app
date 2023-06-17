@@ -1,15 +1,28 @@
 import style from "./Home.module.css";
 import TodoList from "../Home/components/TodoList/TodoList";
 import IconSoon from "../../assets/icons/Sun";
+import { useState } from "react";
+import IconMoon from "../../assets/icons/Moon";
 
 const Home = () => {
+  const [theme, setTheme] = useState(false);
+
+  const changeTheme = () => {
+    setTheme(!theme);
+  };
+
   return (
-    <main className={style.main}>
+    <main className={`${style.main} ${theme ? "light" : "dark"}`}>
       <div className={style.container}>
         <header className={style.header}>
           <h1 className={style.title}>Todo</h1>
-          <button className="theme-btn" type="button">
-            <IconSoon />
+          <button
+            onClick={changeTheme}
+            className="theme-btn"
+            type="button"
+            title="Theme button"
+          >
+            {theme ? <IconMoon /> : <IconSoon />}
           </button>
         </header>
         <div className={style.input_container}>
