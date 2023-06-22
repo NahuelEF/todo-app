@@ -6,10 +6,12 @@ const TodoList = () => {
     <ul>
       {todoTask.length === 0 ? (
         <li>
-          <p>No hay task</p>
+          <p>There are not task</p>
         </li>
       ) : (
-        todoTask.map(({ id, todo }) => <TodoItem todo={todo} key={id} />)
+        todoTask.map((todo) => (
+          <TodoItem key={todo.id} label={todo.title} active={todo.active} />
+        ))
       )}
     </ul>
   );

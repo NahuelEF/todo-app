@@ -1,0 +1,29 @@
+.bottom-nav {
+  padding: 1rem;
+  background-color: var(--secondary-bg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: var(--regular-weight);
+  font-size: 1rem;
+}
+.bottom-nav__span,
+.bottom-nav__btn {
+  color: var(--tertiary-txt);
+  font-size: 0.98rem;
+  font-weight: inherit;
+  transition: color var(--delay) ease-in-out;
+}
+.bottom-nav__btn:hover {
+  color: var(--tertiary-hover-txt);
+}
+.active {
+  color: var(--primary-txt-bright) !important;
+}
+
+.contain-center {
+  font-weight: var(--bold-weight);
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}

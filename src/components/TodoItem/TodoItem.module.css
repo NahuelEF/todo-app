@@ -1,4 +1,5 @@
 .todo-item {
+  width: 100%;
   border-bottom: 1px solid var(--primary-line);
   padding: 1rem;
   background-color: var(--secondary-bg);
@@ -36,6 +37,9 @@
 }
 
 .todo__label {
+  font-size: 1.125rem;
+  font-weight: var(--regular-weight);
+  -webkit-user-select: none;
   user-select: none;
   cursor: inherit;
 }

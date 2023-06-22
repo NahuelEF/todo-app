@@ -1,8 +1,9 @@
-import style from "./Home.module.css";
-import TodoList from "../Home/components/TodoList/TodoList";
-import IconSoon from "../../assets/icons/Sun";
 import { useState } from "react";
+import style from "./Home.module.css";
+import IconSoon from "../../assets/icons/Sun";
 import IconMoon from "../../assets/icons/Moon";
+import TodoList from "../Home/components/TodoList/TodoList";
+import BottomNavigation from "../../components/BottomNavigation/BottomNavigation";
 
 const Home = () => {
   const [theme, setTheme] = useState(false);
@@ -36,30 +37,14 @@ const Home = () => {
         </div>
         <div className={style.list_container}>
           <TodoList />
-          <div className={style.footer}>
-            <span>0 items left</span>
-            <div className={style.sub_footer}>
-              <span>All</span>
-              <span>Active</span>
-              <span>Completed</span>
-            </div>
-            <span>Clear Completed</span>
-          </div>
+          <BottomNavigation />
         </div>
       </div>
-      <p>Drag and drop to reorder list</p>
+      <p style={{ color: "var(--tertiary-txt)" }}>
+        Drag and drop to reorder list
+      </p>
     </main>
   );
 };
 
 export default Home;
-
-{
-  /* <ul>
-  <li>items left</li>
-  <li>All</li>
-  <li>Active</li>
-  <li>Completed</li>
-  <li>Clear Completed</li>
-</ul> */
-}

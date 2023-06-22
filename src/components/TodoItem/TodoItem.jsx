@@ -2,7 +2,7 @@ import { useId } from "react";
 import IconCross from "../../assets/icons/Cross";
 import style from "./TodoItem.module.css";
 
-const TodoItem = ({ todo }) => {
+const TodoItem = ({ label, active }) => {
   const todoId = useId();
   return (
     <li className={style["todo-item"]}>
@@ -11,12 +11,17 @@ const TodoItem = ({ todo }) => {
           id={`${todoId}-todo`}
           className={style["todo__btn"]}
           type="checkbox"
+          defaultChecked={active}
         />
         <label className={style["todo__label"]} htmlFor={`${todoId}-todo`}>
-          {todo}
+          {label}
         </label>
       </div>
-      <button type="button" title="Delete task">
+      <button
+        className={style["todo__button"]}
+        type="button"
+        title="Delete task"
+      >
         <IconCross />
       </button>
     </li>

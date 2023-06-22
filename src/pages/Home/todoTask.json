@@ -1,14 +1,17 @@
 [
   {
     "id": "0",
-    "todo": "Jog around the park 3x"
+    "title": "Jog around the park 3x",
+    "active": false
   },
   {
     "id": "1",
-    "todo": "10 minutes meditation"
+    "title": "10 minutes meditation",
+    "active": true
   },
   {
     "id": "2",
-    "todo": "Read for 1 hour"
+    "title": "Read for 1 hour",
+    "active": false
   }
 ]
