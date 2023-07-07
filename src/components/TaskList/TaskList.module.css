@@ -1,4 +1,4 @@
-.todo-item {
+.task_item {
   width: 100%;
   border-bottom: 1px solid var(--primary-line);
   padding: 1rem;
@@ -7,14 +7,14 @@
   align-items: center;
   justify-content: space-between;
 }
-.todo {
+.task {
   display: flex;
   align-items: center;
   gap: 1rem;
   cursor: pointer;
 }
 
-.todo__btn {
+.task__btn {
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -27,23 +27,21 @@
   cursor: inherit;
 }
 
-.todo__btn:checked {
+.task__btn:checked {
   border-color: transparent;
   background: var(--primary-bg-check) border-box;
 }
 
-.todo__btn:checked::before {
+.task__btn:checked::before {
   content: url(../../assets/icons/icon-check.svg);
 }
 
-.todo__label {
+.task__label {
   font-size: 1.125rem;
   font-weight: var(--regular-weight);
-  -webkit-user-select: none;
-  user-select: none;
   cursor: inherit;
 }
-.todo__btn:checked + .todo__label {
+.task__btn:checked + .task__label {
   color: var(--secondary-txt);
   text-decoration: line-through;
 }
