@@ -1,5 +1,5 @@
 import * as React from "react";
-const IconSoon = () => (
+const IconsSun = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={26} height={26}>
     <path
       fill="#FFF"
@@ -8,4 +8,4 @@ const IconSoon = () => (
     />
   </svg>
 );
-export default IconSoon;
+export default IconsSun;
