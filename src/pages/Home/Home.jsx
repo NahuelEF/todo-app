@@ -24,12 +24,7 @@ const initialTodos = [
 ];
 
 const Home = () => {
-  const [theme, setTheme] = useState(false);
   const [todos, setTodos] = useState(initialTodos);
-
-  const changeThemeColor = () => {
-    setTheme(!theme);
-  };
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -55,21 +50,16 @@ const Home = () => {
   };
 
   return (
-    <main className={`${style["main"]} ${theme ? "light" : "dark"}`}>
+    <main className={style["main"]}>
       <div className={style["container"]}>
-        <Header onClick={changeThemeColor} theme={theme} />
+        <Header />
         <AddTodo onAddTodo={handleAddTodo} />
-        <div className={style["list_container"]}>
-          <TaskList
-            todos={todos}
-            onChangeTodo={handleChangeTodo}
-            onDeleteTodo={handleDeleteTodo}
-          />
-        </div>
+        <TaskList
+          todos={todos}
+          onChangeTodo={handleChangeTodo}
+          onDeleteTodo={handleDeleteTodo}
+        />
       </div>
-      <p style={{ color: "var(--tertiary-txt)" }}>
-        Drag and drop to reorder list
-      </p>
     </main>
   );
 };
