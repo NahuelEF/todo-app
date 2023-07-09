@@ -4,21 +4,36 @@ import Header from "./components/Header/Header";
 import AddTodo from "../../components/AddTodo/AddTodo";
 import TaskList from "../../components/TaskList/TaskList";
 
-let nextId = 3;
+let nextId = 6;
 const initialTodos = [
   {
     id: 0,
-    title: "Jog around the park 3x",
+    title: "Complete online JavaScript course",
     done: true,
   },
   {
     id: 1,
-    title: "10 minutes meditation",
+    title: "Jog around the park 3x",
     done: false,
   },
   {
     id: 2,
+    title: "10 minutes meditation",
+    done: false,
+  },
+  {
+    id: 3,
     title: "Read for 1 hour",
+    done: false,
+  },
+  {
+    id: 4,
+    title: "Pick up groceries",
+    done: false,
+  },
+  {
+    id: 5,
+    title: "Complete Todo App on Frontend Mentor",
     done: false,
   },
 ];
@@ -40,7 +55,7 @@ const Home = () => {
   const handleChangeTodo = (nextTodo) => {
     setTodos(
       todos.map((todo) => {
-        todo.id === nextTodo.id ? nextTodo : todo;
+        return todo.id === nextTodo.id ? nextTodo : todo;
       })
     );
   };
