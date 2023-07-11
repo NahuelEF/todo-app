@@ -11,6 +11,9 @@
   padding: 1rem;
   border-radius: var(--border-radius);
   background-color: var(--secondary-bg);
+  -webkit-box-shadow: var(--primary-box-shadow);
+  -moz-box-shadow: var(--primary-box-shadow);
+  box-shadow: var(--primary-box-shadow);
   display: flex;
   align-items: center;
   justify-content: space-between;
