@@ -3,6 +3,7 @@ import style from "./Home.module.css";
 import Header from "./components/Header/Header";
 import AddTodo from "../../components/AddTodo/AddTodo";
 import TaskList from "../../components/TaskList/TaskList";
+import Filter from "../../components/Filter/Filter";
 
 let nextId = 6;
 const initialTodos = [
@@ -66,15 +67,18 @@ const Home = () => {
 
   return (
     <main className={style["main"]}>
-      <div className={style["container"]}>
+      <section className={style["section"]}>
         <Header />
         <AddTodo onAddTodo={handleAddTodo} />
-        <TaskList
-          todos={todos}
-          onChangeTodo={handleChangeTodo}
-          onDeleteTodo={handleDeleteTodo}
-        />
-      </div>
+        <div className={style["container"]}>
+          <TaskList
+            todos={todos}
+            onChangeTodo={handleChangeTodo}
+            onDeleteTodo={handleDeleteTodo}
+          />
+          <Filter />
+        </div>
+      </section>
     </main>
   );
 };

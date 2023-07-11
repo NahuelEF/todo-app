@@ -11,14 +11,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: background var(--delay) ease-in-out;
+  transition: background var(--delay);
 }
 
-.container {
+.section {
   width: min(542px, 100%);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+}
+
+.container {
+  width: 100%;
+  border-radius: var(--border-radius);
+  -webkit-box-shadow: var(--primary-box-shadow);
+  -moz-box-shadow: var(--primary-box-shadow);
+  box-shadow: var(--primary-box-shadow);
+  overflow: hidden;
 }

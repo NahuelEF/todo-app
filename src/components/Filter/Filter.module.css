@@ -1,4 +1,4 @@
-.bottom-nav {
+.filter {
   padding: 1rem;
   background-color: var(--secondary-bg);
   display: flex;
@@ -7,21 +7,21 @@
   font-weight: var(--regular-weight);
   font-size: 1rem;
 }
-.bottom-nav__span,
-.bottom-nav__btn {
+.filter__span,
+.filter__btn {
   color: var(--tertiary-txt);
   font-size: 0.98rem;
   font-weight: inherit;
-  transition: color var(--delay) ease-in-out;
+  transition: color var(--delay);
 }
-.bottom-nav__btn:hover {
+.filter__btn:hover {
   color: var(--tertiary-hover-txt);
 }
 .active {
   color: var(--primary-txt-bright) !important;
 }
 
-.contain-center {
+.contain {
   font-weight: var(--bold-weight);
   display: flex;
   align-items: center;
