@@ -65,6 +65,14 @@ const Home = () => {
     setTodos(todos.filter((todo) => todo.id !== todoId));
   };
 
+  const handleDeleteCompleted = () => {
+    setTodos(todos.filter((todo) => !todo.done));
+  };
+
+  const todosCompleted = todos.filter((todo) => todo.done);
+
+  const completedCount = todos.length - todosCompleted.length;
+
   return (
     <main className={style["main"]}>
       <section className={style["section"]}>
@@ -76,7 +84,10 @@ const Home = () => {
             onChangeTodo={handleChangeTodo}
             onDeleteTodo={handleDeleteTodo}
           />
-          <Filter />
+          <Filter
+            todosActive={completedCount}
+            onDeleteCompleted={handleDeleteCompleted}
+          />
         </div>
       </section>
     </main>

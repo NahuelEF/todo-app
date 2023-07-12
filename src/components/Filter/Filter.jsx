@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import style from "./Filter.module.css";
 
-export default function Filter() {
-  const [todoActive, setTodoActive] = useState(0);
+export default function Filter({ todosActive, onDeleteCompleted }) {
   const [isActive, setIsActive] = useState("All");
 
   const handleClick = (label) => {
@@ -10,8 +9,8 @@ export default function Filter() {
   };
 
   return (
-    <div className={style["filter"]} >
-      <span className={style["filter__span"]}>{todoActive} items left</span>
+    <div className={style["filter"]}>
+      <span className={style["filter__span"]}>{todosActive} items left</span>
       <div className={style["contain"]}>
         <ButtonFilter label="All" active={isActive} onClick={handleClick} />
         <ButtonFilter label="Active" active={isActive} onClick={handleClick} />
@@ -21,7 +20,11 @@ export default function Filter() {
           onClick={handleClick}
         />
       </div>
-      <button className={style["filter__btn"]} type="button">
+      <button
+        className={style["filter__btn"]}
+        type="button"
+        onClick={onDeleteCompleted}
+      >
         Clear Completed
       </button>
     </div>

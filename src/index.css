@@ -5,7 +5,7 @@
     hsl(192, 100%, 67%),
     hsl(280, 87%, 65%)
   );
-  --primary-box-shadow: 15px 15px 35px -20px rgba(0, 0, 0, 0.4);
+  --primary-box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.4);
 
   --primary-font-family: "Josefin Sans", sans-serif;
   --regular-weight: 400;
