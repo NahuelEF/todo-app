@@ -1,9 +1,7 @@
+import { AddTodo, Filter, TaskList } from "@/components";
 import { useState } from "react";
 import style from "./Home.module.css";
-import Header from "./components/Header/Header";
-import AddTodo from "../../components/AddTodo/AddTodo";
-import TaskList from "../../components/TaskList/TaskList";
-import Filter from "../../components/Filter/Filter";
+import { Header } from "./components";
 
 let nextId = 6;
 const initialTodos = [
@@ -39,8 +37,11 @@ const initialTodos = [
   },
 ];
 
-const Home = () => {
+export const Home = () => {
   const [todos, setTodos] = useState(initialTodos);
+
+  const todosCompleted = todos.filter((todo) => todo.done);
+  const completedCount = todos.length - todosCompleted.length;
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -69,10 +70,6 @@ const Home = () => {
     setTodos(todos.filter((todo) => !todo.done));
   };
 
-  const todosCompleted = todos.filter((todo) => todo.done);
-
-  const completedCount = todos.length - todosCompleted.length;
-
   return (
     <main className={style["main"]}>
       <section className={style["section"]}>
@@ -93,5 +90,3 @@ const Home = () => {
     </main>
   );
 };
-
-export default Home;

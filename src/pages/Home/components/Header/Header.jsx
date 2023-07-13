@@ -1,9 +1,9 @@
 import { useState } from "react";
 import style from "./Header.module.css";
-import IconMoon from "../../../../assets/icons/Moon";
-import IconsSun from "../../../../assets/icons/Sun";
+import IconMoon from "@/assets/icons/Moon";
+import IconsSun from "@/assets/icons/Sun";
 
-const Header = () => {
+export const Header = () => {
   const [theme, setTheme] = useState("dark");
 
   const handleThemeChange = () => {
@@ -21,5 +21,3 @@ const Header = () => {
     </header>
   );
 };
-
-export default Header;

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import style from "./AddTodo.module.css";
 
-const AddTodo = ({ onAddTodo }) => {
+export const AddTodo = ({ onAddTodo }) => {
   const [title, setTitle] = useState("");
 
   const onSubmitTodo = (e) => {
@@ -23,5 +23,3 @@ const AddTodo = ({ onAddTodo }) => {
     </form>
   );
 };
-
-export default AddTodo;

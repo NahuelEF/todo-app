@@ -3,7 +3,6 @@
   min-height: 100vh;
   color: var(--primary-txt);
   background-color: var(--primary-bg);
-  background-image: url(../../assets/images/bg-desktop-dark.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 50%;
@@ -12,6 +11,13 @@
   align-items: center;
   justify-content: center;
   transition: background var(--delay);
+}
+html[data-theme="light"] .main {
+  background-image: url(@/assets/images/bg-desktop-light.jpg);
+}
+
+html[data-theme="dark"] .main {
+  background-image: url(@/assets/images/bg-desktop-dark.jpg);
 }
 
 .section {

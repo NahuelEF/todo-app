@@ -1,8 +1,8 @@
+import IconCross from "@/assets/icons/Cross";
 import { useId } from "react";
 import style from "./TaskList.module.css";
-import IconCross from "../../assets/icons/Cross";
 
-export default function TaskList({ todos, onChangeTodo, onDeleteTodo }) {
+export const TaskList = ({ todos, onChangeTodo, onDeleteTodo }) => {
   return (
     <ul className={style["task-list"]}>
       {todos.map((todo) => (
@@ -12,7 +12,7 @@ export default function TaskList({ todos, onChangeTodo, onDeleteTodo }) {
       ))}
     </ul>
   );
-}
+};
 
 const Task = ({ todo, onChange, onDelete }) => {
   const taskId = useId();
