@@ -6,7 +6,7 @@ export const AddTodo = ({ onAddTodo }) => {
 
   const onSubmitTodo = (e) => {
     e.preventDefault();
-    title !== "" && onAddTodo(title);
+    title !== "" && onAddTodo(title.trim());
     setTitle("");
   };
 
