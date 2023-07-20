@@ -31,10 +31,7 @@ html[data-theme="dark"] .main {
 
 .container {
   width: 100%;
-  border-radius: var(--border-radius);
-  background-color: var(--secondary-bg);
   -webkit-box-shadow: var(--primary-box-shadow);
   -moz-box-shadow: var(--primary-box-shadow);
   box-shadow: var(--primary-box-shadow);
-  overflow: hidden;
 }

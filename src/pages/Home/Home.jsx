@@ -39,9 +39,17 @@ const initialTodos = [
 
 export const Home = () => {
   const [todos, setTodos] = useState(initialTodos);
+  const [activeFilter, setActiveFilter] = useState("all");
 
-  const todosCompleted = todos.filter((todo) => todo.done);
-  const completedCount = todos.length - todosCompleted.length;
+  const todosCompleted = todos.filter((todo) => todo.done).length;
+
+  const activeTodos = todos.length - todosCompleted;
+
+  const filteredTodos = todos.filter((todo) => {
+    if (activeFilter === "active") return !todo.done;
+    if (activeFilter === "completed") return todo.done;
+    return todo;
+  });
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -70,6 +78,10 @@ export const Home = () => {
     setTodos(todos.filter((todo) => !todo.done));
   };
 
+  const handleFilterTodo = (filter) => {
+    setActiveFilter(filter);
+  };
+
   return (
     <main className={style["main"]}>
       <section className={style["section"]}>
@@ -77,13 +89,15 @@ export const Home = () => {
         <AddTodo onAddTodo={handleAddTodo} />
         <div className={style["container"]}>
           <TaskList
-            todos={todos}
+            todos={filteredTodos}
             onChangeTodo={handleChangeTodo}
             onDeleteTodo={handleDeleteTodo}
           />
           <Filter
-            todosActive={completedCount}
+            todosActive={activeTodos}
             onDeleteCompleted={handleDeleteCompleted}
+            onFilterTodo={handleFilterTodo}
+            activeFilter={activeFilter}
           />
         </div>
       </section>

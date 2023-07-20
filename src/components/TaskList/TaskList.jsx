@@ -33,7 +33,7 @@ const Task = ({ todo, onChange, onDelete }) => {
         </label>
       </div>
       <button
-        className={style["task__button"]}
+        className={style["task__delete"]}
         type="button"
         title="Delete task"
         onClick={() => onDelete(todo.id)}

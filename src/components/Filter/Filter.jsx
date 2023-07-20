@@ -1,46 +1,42 @@
-import { useState } from "react";
 import style from "./Filter.module.css";
 
-export const Filter = ({ todosActive, onDeleteCompleted }) => {
-  const [isActive, setIsActive] = useState("All");
+const TODO_FILTER = {
+  ALL: "all",
+  ACTIVE: "active",
+  COMPLETED: "completed",
+};
 
-  const handleClick = (label) => {
-    setIsActive(label);
-  };
-
+export const Filter = ({
+  todosActive,
+  onDeleteCompleted,
+  onFilterTodo,
+  activeFilter,
+}) => {
   return (
-    <div className={style["filter"]}>
-      <span className={style["filter__span"]}>{todosActive} items left</span>
-      <div className={style["contain"]}>
-        <ButtonFilter label="All" active={isActive} onClick={handleClick} />
-        <ButtonFilter label="Active" active={isActive} onClick={handleClick} />
-        <ButtonFilter
-          label="Completed"
-          active={isActive}
-          onClick={handleClick}
-        />
-      </div>
+    <div className={style["bottom"]}>
+      <span className={style["bottom__span"]}>{todosActive} items left</span>
+      <ul className={style["filter"]}>
+        {Object.entries(TODO_FILTER).map(([key, value]) => (
+          <li key={key}>
+            <button
+              onClick={() => onFilterTodo(value)}
+              type="button"
+              className={`${style["filter__button"]} ${
+                activeFilter === value ? style["active"] : ""
+              }`}
+            >
+              {value}
+            </button>
+          </li>
+        ))}
+      </ul>
       <button
-        className={style["filter__btn"]}
+        className={style["filter__button"]}
         type="button"
         onClick={onDeleteCompleted}
       >
         Clear Completed
       </button>
     </div>
-  );
-};
-
-const ButtonFilter = ({ label, active, onClick }) => {
-  return (
-    <button
-      onClick={() => onClick(label)}
-      className={`${style["filter__btn"]} ${
-        active === label ? style["active"] : ""
-      }`}
-      type="button"
-    >
-      {label}
-    </button>
   );
 };

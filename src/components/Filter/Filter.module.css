@@ -1,4 +1,8 @@
-.filter {
+.bottom {
+  position: relative;
+  width: 100%;
+  border-bottom-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
   padding: 1rem;
   background-color: var(--secondary-bg);
   display: flex;
@@ -7,23 +11,29 @@
   font-weight: var(--regular-weight);
   font-size: 1rem;
 }
-.filter__span,
-.filter__btn {
+
+.filter {
+  font-weight: var(--bold-weight);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+.filter__button {
+  text-transform: capitalize;
+}
+.filter__button:hover {
+  color: var(--tertiary-hover-txt);
+}
+
+.bottom__span,
+.filter__button {
   color: var(--tertiary-txt);
   font-size: 0.98rem;
   font-weight: inherit;
   transition: color var(--delay);
 }
-.filter__btn:hover {
-  color: var(--tertiary-hover-txt);
-}
+
 .active {
   color: var(--primary-txt-bright) !important;
-}
-
-.contain {
-  font-weight: var(--bold-weight);
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
 }

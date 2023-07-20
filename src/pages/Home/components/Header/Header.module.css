@@ -10,4 +10,5 @@
   letter-spacing: 1rem;
   font-weight: var(--bold-weight);
   font-size: 2rem;
+  user-select: none;
 }

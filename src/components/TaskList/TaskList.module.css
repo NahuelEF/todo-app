@@ -1,7 +1,13 @@
+.task-list {
+  width: 100%;
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  overflow: hidden;
+}
+
 .task-contain {
   display: flex;
   align-items: center;
-  gap: 1rem;
   cursor: pointer;
 }
 
@@ -40,22 +46,36 @@
 .task__checkbox:checked::before {
   content: url(../../assets/icons/icon-check.svg);
 }
-.task__checkbox:checked + .task__label {
-  color: var(--secondary-txt);
-  text-decoration: line-through;
-}
 .task__label {
+  position: relative;
+  padding-left: 1rem;
   font-size: 1.125rem;
   font-weight: var(--regular-weight);
   cursor: inherit;
 }
-.task__button {
+.task__checkbox:checked + .task__label {
+  color: var(--secondary-txt);
+}
+.task__label::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 1rem;
+  width: 0;
+  height: 1px;
+  background-color: var(--secondary-txt);
+  transition: width var(--delay);
+}
+.task__checkbox:checked + .task__label::before {
+  width: calc(100% - 1rem);
+}
+.task__delete {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.task__button::before {
+.task__delete::before {
   content: "";
   position: absolute;
   width: 35px;
@@ -65,6 +85,6 @@
   opacity: 0;
   transition: all var(--delay);
 }
-.task__button:hover::before {
+.task__delete:hover::before {
   opacity: 1;
 }
