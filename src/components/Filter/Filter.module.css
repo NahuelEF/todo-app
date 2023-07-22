@@ -3,7 +3,7 @@
   width: 100%;
   border-bottom-left-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
-  padding: 1rem;
+  padding: var(--padding-container);
   background-color: var(--secondary-bg);
   display: flex;
   align-items: center;
@@ -17,10 +17,11 @@
 }
 
 .filter {
+  background-color: var(--secondary-bg);
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  gap: 1.5rem;
+  gap: 1.125rem;
 }
 .filter__button {
   color: var(--tertiary-txt);
@@ -28,13 +29,12 @@
   font-size: var(--small-font-size);
   font-weight: var(--bold-font-weight);
 }
-:is(.bottom__button, .filter__button) {
+:is(.filter__button, .bottom__button) {
   transition: color var(--delay);
 }
-:is(.bottom__button, .filter__button):hover {
+:is(.filter__button, .bottom__button):hover {
   color: var(--tertiary-hover-txt);
 }
-
 .active {
   color: var(--primary-txt-bright) !important;
 }

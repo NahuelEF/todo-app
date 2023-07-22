@@ -1,6 +1,6 @@
 .circle {
-  width: 30px;
-  height: 30px;
+  width: var(--circle-size);
+  height: var(--circle-size);
   border-radius: 50%;
   border: 1px solid var(--primary-line);
   display: block;
@@ -8,7 +8,7 @@
 
 .form {
   width: 100%;
-  padding: 1rem;
+  padding: var(--padding-container);
   border-radius: var(--border-radius);
   background-color: var(--secondary-bg);
   -webkit-box-shadow: var(--primary-box-shadow);
@@ -19,7 +19,7 @@
   justify-content: space-between;
 }
 .form__input {
-  padding-left: 1rem;
+  padding-left: var(--padding-left);
   color: var(--primary-txt);
   font-size: var(--medium-font-size);
   font-weight: var(--regular-font-weight);

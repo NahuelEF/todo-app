@@ -16,6 +16,9 @@
 
   --border-radius: 5px;
   --delay: 0.2s ease-in-out;
+  --padding-left: 1.125rem;
+  --padding-container: 1.125rem 1.5rem;
+  --circle-size: 1.625rem;
 }
 
 html[data-theme="light"] {
@@ -167,3 +170,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+/* @media (max-width: 31.25rem) {
+  :root {
+    --padding-container: 1rem 1.25rem;
+  }
+}
+ */
