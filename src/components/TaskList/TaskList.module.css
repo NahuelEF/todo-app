@@ -46,11 +46,12 @@
 .task__checkbox:checked::before {
   content: url(../../assets/icons/icon-check.svg);
 }
+
 .task__label {
   position: relative;
   padding-left: 1rem;
-  font-size: 1.125rem;
-  font-weight: var(--regular-weight);
+  font-size: var(--medium-font-size);
+  font-weight: var(--regular-font-weight);
   cursor: inherit;
 }
 .task__checkbox:checked + .task__label {
@@ -69,6 +70,7 @@
 .task__checkbox:checked + .task__label::before {
   width: calc(100% - 1rem);
 }
+
 .task__delete {
   position: relative;
   display: flex;

@@ -8,7 +8,7 @@
   color: white;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  font-weight: var(--bold-weight);
-  font-size: 2rem;
+  font-size: var(--large-font-size);
+  font-weight: var(--bold-font-weight);
   user-select: none;
 }

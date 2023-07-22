@@ -31,7 +31,7 @@ export const Filter = ({
         ))}
       </ul>
       <button
-        className={style["filter__button"]}
+        className={style["bottom__button"]}
         type="button"
         onClick={onDeleteCompleted}
       >

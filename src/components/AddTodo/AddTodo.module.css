@@ -21,19 +21,11 @@
 .form__input {
   padding-left: 1rem;
   color: var(--primary-txt);
-  font-size: 1.125rem;
+  font-size: var(--medium-font-size);
+  font-weight: var(--regular-font-weight);
   caret-color: var(--primary-txt-bright);
   flex: 1;
 }
 .form__input::placeholder {
   color: var(--secondary-txt);
-}
-
-.list_container {
-  width: 100%;
-  border-radius: var(--border-radius);
-  margin-bottom: 2rem;
-  background-color: var(--secondary-bg);
-  box-shadow: 10px 10px 80px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
 }

@@ -8,8 +8,12 @@
   --primary-box-shadow: 0 15px 35px -15px rgba(0, 0, 0, 0.4);
 
   --primary-font-family: "Josefin Sans", sans-serif;
-  --regular-weight: 400;
-  --bold-weight: 700;
+  --medium-font-size: 1.125rem; /* 18px */
+  --large-font-size: 2.25rem; /* 36px */
+  --small-font-size: 1.031rem; /* 16.5px */
+  --regular-font-weight: 400;
+  --bold-font-weight: 700;
+
   --border-radius: 5px;
   --delay: 0.2s ease-in-out;
 }
