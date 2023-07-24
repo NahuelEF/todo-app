@@ -14,3 +14,17 @@
 .footer__link:hover {
   text-decoration: underline;
 }
+
+br {
+  display: none;
+}
+
+@media (max-width: 31.25rem) {
+  .footer {
+    margin-top: 4.5rem;
+  }
+
+  br {
+    display: inline-block;
+  }
+}

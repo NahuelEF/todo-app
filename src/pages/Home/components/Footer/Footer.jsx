@@ -13,6 +13,7 @@ export const Footer = () => {
         >
           Frontend Mentor.
         </a>{" "}
+        <br />
         Code by{" "}
         <a
           className={style["footer__link"]}

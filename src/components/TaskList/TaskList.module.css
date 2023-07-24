@@ -35,9 +35,7 @@
   transition: all var(--delay);
 }
 .task__checkbox:hover {
-  background: linear-gradient(var(--secondary-bg), var(--secondary-bg))
-      padding-box,
-    var(--primary-bg-check) border-box;
+  background: linear-gradient(var(--secondary-bg), var(--secondary-bg)) padding-box, var(--primary-bg-check) border-box;
   border: 2px solid transparent;
 }
 .task__checkbox:checked {
@@ -54,6 +52,7 @@
   font-size: var(--medium-font-size);
   font-weight: var(--regular-font-weight);
   cursor: inherit;
+  flex: 1;
 }
 .task__checkbox:checked + .task__label {
   color: var(--secondary-txt);

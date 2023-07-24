@@ -44,5 +44,6 @@ html[data-theme="dark"] .main {
 
   .section {
     width: calc(100% - 1.5rem);
+    gap: 1rem;
   }
 }
