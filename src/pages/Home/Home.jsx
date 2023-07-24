@@ -1,7 +1,7 @@
 import { AddTodo, Filter, TaskList } from "@/components";
 import { useState } from "react";
 import style from "./Home.module.css";
-import { Header } from "./components";
+import { Header, Footer } from "./components";
 
 let nextId = 6;
 const initialTodos = [
@@ -100,6 +100,7 @@ export const Home = () => {
             activeFilter={activeFilter}
           />
         </div>
+        <Footer />
       </section>
     </main>
   );

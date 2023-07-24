@@ -1,0 +1,16 @@
+.footer {
+  width: 100%;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+.footer__paragraph {
+  color: var(--tertiary-txt);
+  font-size: var(--small-font-size);
+  font-weight: var(--regular-font-weight);
+}
+.footer__link {
+  color: var(--primary-txt-bright);
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
