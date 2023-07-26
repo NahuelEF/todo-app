@@ -1,7 +1,7 @@
 import { AddTodo, Filter, TaskList } from "@/components";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import style from "./Home.module.css";
-import { Header, Footer } from "./components";
+import { Footer, Header } from "./components";
 
 let nextId = 6;
 const initialTodos = [
@@ -38,8 +38,18 @@ const initialTodos = [
 ];
 
 export const Home = () => {
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("task")) || initialTodos);
   const [activeFilter, setActiveFilter] = useState("all");
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "dark");
+
+  useEffect(() => {
+    localStorage.setItem("task", JSON.stringify(todos));
+  }, [todos]);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
+    document.querySelector("html").setAttribute("data-theme", theme);
+  }, [theme]);
 
   const todosCompleted = todos.filter((todo) => todo.done).length;
 
@@ -50,6 +60,11 @@ export const Home = () => {
     if (activeFilter === "completed") return todo.done;
     return todo;
   });
+
+  const handleChangeTheme = () => {
+    const newTheme = theme === "dark" ? "light" : "dark";
+    setTheme(newTheme);
+  };
 
   const handleAddTodo = (title) => {
     setTodos([
@@ -85,14 +100,10 @@ export const Home = () => {
   return (
     <main className={style["main"]}>
       <section className={style["section"]}>
-        <Header />
+        <Header onChangeTheme={handleChangeTheme} theme={theme} />
         <AddTodo onAddTodo={handleAddTodo} />
         <div className={style["container"]}>
-          <TaskList
-            todos={filteredTodos}
-            onChangeTodo={handleChangeTodo}
-            onDeleteTodo={handleDeleteTodo}
-          />
+          <TaskList todos={filteredTodos} onChangeTodo={handleChangeTodo} onDeleteTodo={handleDeleteTodo} />
           <Filter
             todosActive={activeTodos}
             onDeleteCompleted={handleDeleteCompleted}
