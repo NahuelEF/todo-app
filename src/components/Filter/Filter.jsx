@@ -6,12 +6,7 @@ const TODO_FILTER = {
   COMPLETED: "completed",
 };
 
-export const Filter = ({
-  todosActive,
-  onDeleteCompleted,
-  onFilterTodo,
-  activeFilter,
-}) => {
+export const Filter = ({ todosActive, onDeleteCompleted, onFilterTodo, activeFilter }) => {
   return (
     <div className={style["bottom"]}>
       <span className={style["bottom__span"]}>{todosActive} items left</span>
@@ -21,20 +16,14 @@ export const Filter = ({
             <button
               onClick={() => onFilterTodo(value)}
               type="button"
-              className={`${style["filter__button"]} ${
-                activeFilter === value ? style["active"] : ""
-              }`}
+              className={`${style["filter__button"]} ${activeFilter === value ? style["active"] : ""}`}
             >
               {value}
             </button>
           </li>
         ))}
       </ul>
-      <button
-        className={style["bottom__button"]}
-        type="button"
-        onClick={onDeleteCompleted}
-      >
+      <button className={style["bottom__button"]} type="button" onClick={onDeleteCompleted}>
         Clear Completed
       </button>
     </div>

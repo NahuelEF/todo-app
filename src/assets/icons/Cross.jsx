@@ -1,5 +1,4 @@
-import * as React from "react";
-const IconCross = () => (
+export const IconCross = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width={18} height={18}>
     <path
       fill="#494C6B"
@@ -8,4 +7,3 @@ const IconCross = () => (
     />
   </svg>
 );
-export default IconCross;
