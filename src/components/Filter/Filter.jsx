@@ -1,10 +1,5 @@
+import { TODO_FILTER } from "@/constants/filter";
 import style from "./Filter.module.css";
-
-const TODO_FILTER = {
-  ALL: "all",
-  ACTIVE: "active",
-  COMPLETED: "completed",
-};
 
 export const Filter = ({ todosActive, onDeleteCompleted, onFilterTodo, activeFilter }) => {
   return (

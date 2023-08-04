@@ -1,4 +1,5 @@
 import { AddTodo, Filter, TaskList } from "@/components";
+import { TODO_FILTER } from "@/constants/filter";
 import { useEffect, useState } from "react";
 import style from "./Home.module.css";
 import { Footer, Header } from "./components";
@@ -39,7 +40,7 @@ const initialTodos = [
 
 export const Home = () => {
   const [todos, setTodos] = useState(JSON.parse(localStorage.getItem("task")) || initialTodos);
-  const [activeFilter, setActiveFilter] = useState("all");
+  const [activeFilter, setActiveFilter] = useState(TODO_FILTER.ALL);
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")) || "dark");
 
   useEffect(() => {
@@ -56,8 +57,8 @@ export const Home = () => {
   const activeTodos = todos.length - todosCompleted;
 
   const filteredTodos = todos.filter((todo) => {
-    if (activeFilter === "active") return !todo.done;
-    if (activeFilter === "completed") return todo.done;
+    if (activeFilter === TODO_FILTER.ACTIVE) return !todo.done;
+    if (activeFilter === TODO_FILTER.COMPLETED) return todo.done;
     return todo;
   });
 
