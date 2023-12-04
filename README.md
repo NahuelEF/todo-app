@@ -2,9 +2,14 @@
 
 This is a solution to the [Todo app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/todo-app-Su1_KokOW). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## 📚 Overview
+![](./public/design/desktop-preview.jpg)
 
-### The challenge
+## 📌 Links
+
+- Solution URL: [GitHub](https://github.com/NahuelEF/todo-app.git)
+- Live Site URL: [Todo App](https://nahuelef-todo-app.netlify.app/)
+  
+## 🎯 The challenge
 
 Users should be able to:
 
@@ -17,14 +22,6 @@ Users should be able to:
 - [x] Clear all completed todos
 - [x] Toggle light and dark mode
 
-### 📸 Screenshot
-
-![](./public/design/desktop-preview.jpg)
-
-### Links
-
-- Solution URL: [GitHub](https://github.com/NahuelEF/todo-app.git)
-- Live Site URL: [Todo App](https://nahuelef-todo-app.netlify.app/)
 
 ## 🛠 Built with
 
